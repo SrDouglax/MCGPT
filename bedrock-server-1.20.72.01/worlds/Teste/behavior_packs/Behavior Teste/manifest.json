@@ -1,0 +1,30 @@
+{
+  "format_version": 2,
+  "header": {
+    "name": "Teste",
+    "description": ",",
+    "uuid": "25cd7f9c-08a4-a62a-7e29-7d547db9829b",
+    "version": [0, 1, 0],
+    "min_engine_version": [1, 20, 0]
+  },
+  "modules": [
+    {
+      "type": "data",
+      "uuid": "d12d681b-da18-d0d3-2066-2b0f70209c34",
+      "version": [1, 0, 0]
+    },
+    {
+      "type": "script",
+      "language": "javascript",
+      "uuid": "f2798e4e-e818-351f-deb1-6609ab650c38",
+      "version": [1, 0, 0],
+      "entry": "scripts/Main.js"
+    }
+  ],
+  "capabilities": ["script_eval"],
+  "dependencies": [
+    { "module_name": "@minecraft/server", "version": "1.10.0-beta" },
+    { "module_name": "@minecraft/server-net", "version": "1.0.0-beta" },
+    { "module_name": "@minecraft/server-ui", "version": "1.2.0-beta" }
+  ]
+}

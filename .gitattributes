@@ -1,0 +1,2 @@
+bedrock_server.pdb filter=lfs diff=lfs merge=lfs -text
+bedrock_server.exe filter=lfs diff=lfs merge=lfs -text

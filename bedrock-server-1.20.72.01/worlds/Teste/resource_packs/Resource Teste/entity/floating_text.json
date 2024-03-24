@@ -1,0 +1,20 @@
+{
+  "format_version": "1.8.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "custom:floating_text",
+      "materials": { "default": "entity" },
+      "textures": {
+        "text": "textures/entity/text/custom"
+      },
+      "geometry": {
+        "default": "geometry.text"
+      },
+      "render_controllers": [ "controller.render.floating_text" ],
+      "spawn_egg": {
+        "texture": "custom_text",
+        "texture_index": 0
+      }
+    }
+  }
+}

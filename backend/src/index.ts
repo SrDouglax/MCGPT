@@ -7,8 +7,6 @@ const port = 3000;
 
 // Sua chave da API do OpenAI
 const apiKey = process.env.OPENAI_API_KEY;
-
-console.log(apiKey)// Criar uma instância da classe OpenAI com sua chave da API
 const openai = new OpenAI({ apiKey });
 
 // Middleware para analisar corpos JSON
@@ -78,6 +76,42 @@ async function interactWithAI(userPrompt: string, chatId: string): Promise<strin
     // Se ocorrer um erro, registre-o no console e retorne uma mensagem de erro
     console.error("Ocorreu um erro:", e);
     return "Ocorreu um erro ao interagir com a API do OpenAI. Por favor, verifique o console para mais detalhes.";
+  }
+}
+
+// Rota para interagir com a API do OpenAI
+app.post("/enhance", async (req, res) => {
+  const { message } = req.body;
+  if (!message) return res.status(400).json({ error: "A mensagem não foi fornecida." });
+
+  try {
+    const response = await enhanceMessageWithAI(message);
+    res.json({ response });
+  } catch (error) {
+    console.error("Ocorreu um erro:", error);
+    res.status(500).json({ error: "Ocorreu um erro ao interagir com a API do OpenAI. Por favor, verifique o console para mais detalhes." });
+  }
+});
+
+async function enhanceMessageWithAI(message: string): Promise<string> {
+  try {
+    // Formate a solicitação para a API
+    const response = await openai.chat.completions.create({
+      model: "gpt-3.5-turbo-0613",
+      messages: [
+        { role: "system", content: "Modify user messages so that they become elaborate, speak as if you were the user" },
+        { role: "user", content: message },
+      ],
+      max_tokens: 100,
+      temperature: 0.5,
+    });
+
+    // Retorne a resposta da AI
+    return response.choices[0].message.content || "";
+  } catch (e) {
+    // Se ocorrer um erro, registre-o no console e retorne uma mensagem de erro
+    console.error("An error occurred while enhancing the message with AI:", e);
+    return "An error occurred while enhancing the message with AI. Please check the console for more details.";
   }
 }
 
