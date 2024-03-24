@@ -1,6 +1,6 @@
 # MCGPT - Minecraft ChatGPT Integration
 
-This is a project that integrates ChatGPT with a Minecraft server chat using BDSX and an Express API to manage ChatGPT responses.
+This is a project that integrates ChatGPT with a Minecraft server chat using [BDS](https://www.minecraft.net/en-us/download/server/bedrock) and an Express API to manage ChatGPT responses.
 
 ## Main Features
 
@@ -8,7 +8,7 @@ This is a project that integrates ChatGPT with a Minecraft server chat using BDS
 
 ## Project Structure
 
-- `bedrock-server-[version]/`: Folder containing the Minecraft server code modified with BDSX to integrate ChatGPT into the game chat.
+- `bedrock-server-[version]/`: Folder containing the Minecraft server code with addon to integrate ChatGPT into the game chat.
   
 - `backend/`: Folder containing the Express API code that manages ChatGPT responses and player interactions in different chats.
 
