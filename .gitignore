@@ -14,3 +14,7 @@
 # Dependency lock files (optional, depending on your workflow)
 **/yarn.lock
 **/package-lock.json
+
+# BDS
+!/bdsx/bedrock_server/VCRUNTIME140_1_.dll
+/bdsx/bedrock_server/
