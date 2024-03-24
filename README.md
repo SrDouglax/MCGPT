@@ -1,4 +1,4 @@
-#MCGPT - Minecraft ChatGPT Integration
+# MCGPT - Minecraft ChatGPT Integration
 
 This is a project that integrates ChatGPT with a Minecraft server chat using BDSX and an Express API to manage ChatGPT responses.
 
