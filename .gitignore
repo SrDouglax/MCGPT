@@ -18,3 +18,6 @@
 # BDS
 !/bdsx/bedrock_server/VCRUNTIME140_1_.dll
 /bdsx/bedrock_server/
+
+# Backend
+/backend/chat
