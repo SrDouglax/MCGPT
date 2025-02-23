@@ -2,7 +2,7 @@
   "compilerOptions": {
     "target": "ES2021",
     "moduleResolution": "Node",
-    "module": "CommonJS", // Alterado para CommonJS para compatibilidade com just-scripts
+    "module": "CommonJS",
     "declaration": false,
     "noLib": false,
     "emitDecoratorMetadata": true,
