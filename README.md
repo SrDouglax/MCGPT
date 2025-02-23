@@ -1,73 +1,72 @@
 # MCGPT
 
-Este projeto integra o ChatGPT dentro de um servidor BDS (Bedrock Dedicated Server) do Minecraft. A cada mensagem enviada no chat do jogo, o ChatGPT responde automaticamente. O projeto é composto por dois servidores: um backend que gerencia as requisições ao ChatGPT e o servidor BDS que executa o jogo Minecraft.
+This project integrates ChatGPT into a BDS (Bedrock Dedicated Server) Minecraft server. For every message sent in the game’s chat, ChatGPT responds automatically. The project consists of two servers: a backend that manages requests to ChatGPT and the BDS server that runs the Minecraft game.
 
-## Requisitos
+## Requirements
 
-- [Node.js](https://nodejs.org/) (versão 16 ou superior)
-- [npm](https://www.npmjs.com/) (gerenciador de pacotes do Node.js)
-- [Git](https://git-scm.com/) (para clonar o repositório)
-- Uma conta na [OpenAI](https://platform.openai.com/) para obter a chave da API
+- [Node.js](https://nodejs.org/) (version 16 or higher)
+- [Git](https://git-scm.com/) (to clone the repository)
+- An [OpenAI](https://platform.openai.com/) account to obtain an API key
 
-## Instalação
+## Installation
 
-1. **Clone o repositório:**
+1. **Clone the repository:**
 
    ```bash
    git clone https://github.com/SrDouglax/MCGPT.git
    cd MCGPT
    ```
 
-2. **Instale as dependências:**
+2. **Install dependencies:**
    ```bash
    npm install
    ```
 
-## Configuração
+## Configuration
 
-1. **Crie o arquivo `.env`:**
-   - Copie o arquivo de exemplo fornecido:
+1. **Create the `.env` file:**
+   - Copy the provided example file:
      ```bash
      cp .env.example .env
      ```
-   - Abra o arquivo `.env` e substitua `OPENAI_API_KEY` pela sua chave da API da OpenAI:
+   - Open the `.env` file and replace `OPENAI_API_KEY` with your OpenAI API key:
      ```
-     OPENAI_API_KEY="sua_chave_da_api_aqui"
+     OPENAI_API_KEY="your_api_key_here"
      ```
 
-## Execução do Projeto
+## Running the Project
 
-Para iniciar os servidores, execute o script `start.bat`:
+To start the servers, run the `start.bat` script:
 
 ```bash
 start.bat
 ```
 
-- **O que acontece:**
+- **What happens:**
 
-  - O script inicia dois servidores:
-    - **Backend:** Responsável por lidar com as requisições ao ChatGPT.
-    - **Servidor BDS:** Executa o jogo Minecraft.
-  - Os logs do servidor BDS serão exibidos no console atual.
-  - O backend roda em segundo plano, processando as mensagens do chat.
+  - The script starts two servers:
+    - **Backend:** Handles requests to ChatGPT.
+    - **BDS Server:** Runs the Minecraft game.
+  - The BDS server logs will be displayed in the current console.
+  - The backend runs in the background, processing chat messages.
 
-- **Parar os servidores:**
-  - Pressione `Ctrl+C` no console do servidor BDS para encerrar ambos os servidores.
+- **Stopping the servers:**
+  - Press `Ctrl+C` in the BDS server console to shut down both servers.
 
-## Desenvolvimento
+## Development
 
-Se você alterar algo no código, siga estas etapas para implantar as mudanças localmente:
+If you make changes to the code, follow these steps to deploy the changes locally:
 
-1. **Atualize o projeto:**
+1. **Update the project:**
 
-   - Execute o comando de implantação local:
+   - Run the local deployment command:
      ```bash
      npm run local-deploy
      ```
 
-2. **Reinicie os servidores:**
-   - Execute novamente o `start.bat` para aplicar as alterações.
+2. **Restart the servers:**
+   - Run `start.bat` again to apply the changes.
 
-## Observações
+## Notes
 
-- Certifique-se de que a chave da API da OpenAI esteja correta no arquivo `.env` para que o ChatGPT funcione.
+- Ensure the OpenAI API key in the `.env` file is correct for ChatGPT to work properly.
